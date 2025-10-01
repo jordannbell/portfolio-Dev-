@@ -67,17 +67,67 @@ export function Projects() {
                 >
                   <div className="card card-hover h-full group">
                     {/* Project Image */}
-                    <div className="relative h-64 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
-                      {/* Project Image */}
+                    <div className="relative h-64 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 group">
+                      {/* Project Initial - Always Visible */}
+                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <motion.div
+                          className="relative"
+                          initial={{ scale: 1, opacity: 1 }}
+                          whileHover={{ scale: 1.2, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: "easeInOut" }}
+                        >
+                          <motion.span
+                            className="text-8xl font-bold gradient-text relative z-10"
+                            animate={{
+                              textShadow: [
+                                "0 0 20px rgba(59, 130, 246, 0.3)",
+                                "0 0 30px rgba(139, 92, 246, 0.4)",
+                                "0 0 20px rgba(59, 130, 246, 0.3)",
+                              ],
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                          >
+                            {project.title[0]}
+                          </motion.span>
+                          {/* Glow Effect */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"
+                            animate={{
+                              scale: [1, 1.2, 1],
+                              opacity: [0.3, 0.6, 0.3],
+                            }}
+                            transition={{
+                              duration: 3,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                          />
+                        </motion.div>
+                      </div>
+
+                      {/* Background Pattern - Always Visible */}
+                      <div className="absolute inset-0 opacity-20 group-hover:opacity-0 transition-opacity duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10" />
+                        <div className="absolute top-4 right-4 w-16 h-16 bg-blue-500/20 rounded-full blur-xl" />
+                        <div className="absolute bottom-4 left-4 w-20 h-20 bg-purple-500/20 rounded-full blur-xl" />
+                      </div>
+
+                      {/* Project Image - Only on Hover */}
                       <motion.img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500"
-                        whileHover={{ scale: 1.1 }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        initial={{ scale: 1.1, opacity: 0 }}
+                        whileHover={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                       />
 
                       {/* Overlay on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4 z-20">
                         <motion.a
                           href={project.liveUrl}
                           target="_blank"
