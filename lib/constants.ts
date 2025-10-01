@@ -56,7 +56,7 @@ export const PROJECTS = [
       "Plateforme SaaS innovante pour les jeunes Africains, facilitant l'accès aux admissions universitaires. Solution complète de gestion des candidatures et des bourses d'études.",
     descriptionEn:
       "Innovative SaaS platform for young Africans, facilitating access to university admissions. Complete solution for managing applications and scholarships.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
     liveUrl: "https://campuspass.vercel.app/",
     githubUrl: "https://github.com/jordannbell",
@@ -68,7 +68,7 @@ export const PROJECTS = [
       "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive. Gestion du contenu, actualités, et système de contact intégré.",
     descriptionEn:
       "Complete institutional website for a school, designed with modern and responsive interface. Content management, news, and integrated contact system.",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
     technologies: ["React", "TypeScript", "TailwindCSS", "API REST", "CMS"],
     liveUrl: "https://2v177.com/home/",
     githubUrl: "https://github.com/jordannbell",
@@ -80,7 +80,7 @@ export const PROJECTS = [
       "Plateforme de jeu concours pour une entreprise de vente de thé. Interface interactive avec système de participation, gestion des lots et suivi des participants en temps réel.",
     descriptionEn:
       "Contest game platform for a tea sales company. Interactive interface with participation system, prize management and real-time participant tracking.",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&h=600&fit=crop",
     technologies: ["React", "Next.js", "TypeScript", "TailwindCSS", "API REST", "Real-time"],
     liveUrl: "https://dsp5-archi-o23b-4-5-g5.online/",
     githubUrl: "https://github.com/jordannbell",
