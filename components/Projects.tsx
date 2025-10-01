@@ -69,10 +69,11 @@ export function Projects() {
                     {/* Project Image */}
                     <div className="relative h-64 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
                       {/* Project Image */}
-                      <img
+                      <motion.img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-500"
+                        whileHover={{ scale: 1.1 }}
                       />
 
                       {/* Overlay on Hover */}
@@ -100,6 +101,34 @@ export function Projects() {
                           <FiGithub className="w-5 h-5 text-white" />
                         </motion.a>
                       </div>
+
+                      {/* Animated Corner Accent */}
+                      <motion.div
+                        className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/30 to-purple-500/30 blur-2xl rounded-full"
+                        animate={{
+                          scale: [1, 1.3, 1],
+                          opacity: [0.4, 0.7, 0.4],
+                          rotate: [0, 90, 0],
+                        }}
+                        transition={{
+                          duration: 4,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                      />
+                      <motion.div
+                        className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 blur-2xl rounded-full"
+                        animate={{
+                          scale: [1, 1.4, 1],
+                          opacity: [0.3, 0.6, 0.3],
+                          rotate: [0, -90, 0],
+                        }}
+                        transition={{
+                          duration: 5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                      />
                     </div>
 
                     {/* Project Info */}

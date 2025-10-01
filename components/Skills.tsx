@@ -85,15 +85,38 @@ export function Skills() {
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
                 }
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                className="card card-hover"
+                className="card card-hover relative overflow-hidden group"
               >
+                {/* Animated Background on Hover */}
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5`}
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.05 }}
+                  transition={{ duration: 0.3 }}
+                />
+
                 {/* Category Header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}
+                <div className="flex items-center gap-3 mb-6 relative z-10">
+                  <motion.div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center relative`}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Icon className="w-6 h-6 text-white" />
-                  </div>
+                    {/* Pulse effect */}
+                    <motion.div
+                      className={`absolute inset-0 rounded-lg bg-gradient-to-br ${category.color}`}
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0, 0.3],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: categoryIndex * 0.2,
+                      }}
+                    />
+                  </motion.div>
                   <h3 className="text-xl font-bold text-light-text-primary dark:text-dark-text-primary">
                     {category.title}
                   </h3>

@@ -90,20 +90,20 @@ export const PROJECTS = [
 export const EDUCATION = [
   {
     id: 1,
-    degree: "Titre Professionnel Développeur Web et Web Mobile",
-    school: "École de Formation / Centre de Formation",
-    period: "2023 - 2024",
+    degree: "Mastère 2 Architecture Web",
+    school: "Digital School of Paris",
+    period: "2024",
     description:
-      "Formation intensive en développement web full stack avec spécialisation JavaScript/TypeScript",
-    skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "SQL"],
+      "Formation spécialisée en architecture web moderne, avec focus sur les technologies cloud, microservices et DevOps. Conception et développement d'applications web scalables et performantes.",
+    skills: ["Architecture Web", "Cloud", "Microservices", "DevOps", "CI/CD"],
   },
   {
     id: 2,
-    degree: "Formation Continue Développement",
-    school: "Auto-formation & Projets Personnels",
-    period: "2022 - Présent",
+    degree: "Licence en Génie Logiciel",
+    school: "IUT de Douala",
+    period: "2022",
     description:
-      "Apprentissage continu des technologies modernes et réalisation de projets personnels",
-    skills: ["Next.js", "TypeScript", "Vue.js", "Angular", "DevOps"],
+      "Formation complète en développement logiciel avec une solide base en programmation, algorithmique et gestion de projet. Acquisition des fondamentaux du génie logiciel et des méthodologies de développement.",
+    skills: ["Programmation", "Algorithmique", "Base de données", "UML", "Gestion de projet"],
   },
 ];

@@ -43,20 +43,49 @@ export function Education() {
                 <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 hidden md:block" />
               )}
 
-              <div className="card card-hover flex flex-col md:flex-row gap-6">
+              <div className="card card-hover flex flex-col md:flex-row gap-6 relative overflow-hidden">
+                {/* Animated Background Gradient */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+
                 {/* Icon */}
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                <motion.div
+                  className="flex-shrink-0 relative z-10"
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center relative">
                     <FiAward className="w-6 h-6 text-white" />
+                    {/* Pulse Animation */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full bg-blue-500/50"
+                      animate={{
+                        scale: [1, 1.5, 1],
+                        opacity: [0.5, 0, 0.5],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div className="flex-1">
+                <div className="flex-1 relative z-10">
                   {/* Degree */}
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                  <motion.h3
+                    className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     {edu.degree}
-                  </h3>
+                  </motion.h3>
 
                   {/* School */}
                   <div className="flex items-center gap-2 text-blue-500 dark:text-blue-400 mb-2">
@@ -77,13 +106,27 @@ export function Education() {
 
                   {/* Skills Tags */}
                   <div className="flex flex-wrap gap-2">
-                    {edu.skills.map((skill) => (
-                      <span
+                    {edu.skills.map((skill, skillIndex) => (
+                      <motion.span
                         key={skill}
-                        className="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full"
+                        className="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full cursor-default"
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={
+                          isInView
+                            ? { opacity: 1, scale: 1 }
+                            : { opacity: 0, scale: 0 }
+                        }
+                        transition={{
+                          duration: 0.3,
+                          delay: index * 0.2 + skillIndex * 0.1,
+                        }}
+                        whileHover={{
+                          scale: 1.1,
+                          backgroundColor: "rgba(59, 130, 246, 0.2)",
+                        }}
                       >
                         {skill}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </div>
