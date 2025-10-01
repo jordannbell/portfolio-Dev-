@@ -56,7 +56,7 @@ export const PROJECTS = [
       "Plateforme de gestion pour campus avec authentification et dashboard interactif",
     descriptionEn:
       "Campus management platform with authentication and interactive dashboard",
-    image: "/projects/campuspass.png",
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     liveUrl: "https://campuspass.vercel.app/",
     githubUrl: "https://github.com/jordannbell",
@@ -68,7 +68,7 @@ export const PROJECTS = [
       "Application web d'architecture avancée avec système de gestion complexe",
     descriptionEn:
       "Advanced architecture web application with complex management system",
-    image: "/projects/dsp5.png",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop",
     technologies: ["Vue.js", "Node.js", "Express", "MongoDB", "Docker"],
     liveUrl: "https://dsp5-archi-o23b-4-5-g5.online/",
     githubUrl: "https://github.com/jordannbell",
@@ -80,10 +80,30 @@ export const PROJECTS = [
       "Plateforme web moderne avec interface utilisateur intuitive et performante",
     descriptionEn:
       "Modern web platform with intuitive and high-performance user interface",
-    image: "/projects/2v177.png",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     technologies: ["React", "TypeScript", "TailwindCSS", "API REST"],
     liveUrl: "https://2v177.com/home/",
     githubUrl: "https://github.com/jordannbell",
   },
 ];
 
+export const EDUCATION = [
+  {
+    id: 1,
+    degree: "Titre Professionnel Développeur Web et Web Mobile",
+    school: "École de Formation / Centre de Formation",
+    period: "2023 - 2024",
+    description:
+      "Formation intensive en développement web full stack avec spécialisation JavaScript/TypeScript",
+    skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "SQL"],
+  },
+  {
+    id: 2,
+    degree: "Formation Continue Développement",
+    school: "Auto-formation & Projets Personnels",
+    period: "2022 - Présent",
+    description:
+      "Apprentissage continu des technologies modernes et réalisation de projets personnels",
+    skills: ["Next.js", "TypeScript", "Vue.js", "Angular", "DevOps"],
+  },
+];

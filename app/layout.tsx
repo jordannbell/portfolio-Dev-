@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://jordanbell-portfolio.vercel.app"),
+  metadataBase: new URL("https://portfolio-jordanb.vercel.app"),
   openGraph: {
     title: "Jordan BELL - Développeur Full Stack",
     description:
       "Portfolio de Jordan BELL, développeur full stack passionné par la création de solutions web innovantes.",
-    url: "https://jordanbell-portfolio.vercel.app",
+    url: "https://portfolio-jordanb.vercel.app",
     siteName: "Jordan BELL Portfolio",
     locale: "fr_FR",
     type: "website",

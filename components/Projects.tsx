@@ -68,12 +68,12 @@ export function Projects() {
                   <div className="card card-hover h-full group">
                     {/* Project Image */}
                     <div className="relative h-64 mb-6 rounded-lg overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
-                      {/* Placeholder with Project Initial */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-8xl font-bold gradient-text">
-                          {project.title[0]}
-                        </span>
-                      </div>
+                      {/* Project Image */}
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
 
                       {/* Overlay on Hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
@@ -100,20 +100,6 @@ export function Projects() {
                           <FiGithub className="w-5 h-5 text-white" />
                         </motion.a>
                       </div>
-
-                      {/* Animated Corner Accent */}
-                      <motion.div
-                        className="absolute top-0 right-0 w-20 h-20 bg-accent-primary/30 blur-2xl"
-                        animate={{
-                          scale: [1, 1.5, 1],
-                          opacity: [0.3, 0.6, 0.3],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                      />
                     </div>
 
                     {/* Project Info */}

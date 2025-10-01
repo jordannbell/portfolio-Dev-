@@ -47,6 +47,10 @@ export const translations = {
         description: "Plateforme web moderne avec interface utilisateur intuitive et performante",
       },
     },
+    education: {
+      title: "Parcours Scolaire",
+      subtitle: "Formation et diplômes",
+    },
     contact: {
       title: "Contactez-moi",
       subtitle: "Vous avez un projet en tête ? Discutons-en !",
@@ -112,6 +116,10 @@ export const translations = {
         title: "2V177 Platform",
         description: "Modern web platform with intuitive and high-performance user interface",
       },
+    },
+    education: {
+      title: "Education",
+      subtitle: "Academic background and degrees",
     },
     contact: {
       title: "Contact Me",
