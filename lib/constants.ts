@@ -53,36 +53,36 @@ export const PROJECTS = [
     id: 1,
     title: "Campus Pass",
     description:
-      "Plateforme de gestion pour campus avec authentification et dashboard interactif",
+      "Plateforme SaaS innovante pour les jeunes Africains, facilitant l'accès aux admissions universitaires. Solution complète de gestion des candidatures et des bourses d'études.",
     descriptionEn:
-      "Campus management platform with authentication and interactive dashboard",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+      "Innovative SaaS platform for young Africans, facilitating access to university admissions. Complete solution for managing applications and scholarships.",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
     liveUrl: "https://campuspass.vercel.app/",
     githubUrl: "https://github.com/jordannbell",
   },
   {
     id: 2,
-    title: "Architecture DSP5",
+    title: "2V177 - Site École",
     description:
-      "Application web d'architecture avancée avec système de gestion complexe",
+      "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive. Gestion du contenu, actualités, et système de contact intégré.",
     descriptionEn:
-      "Advanced architecture web application with complex management system",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop",
-    technologies: ["Vue.js", "Node.js", "Express", "MongoDB", "Docker"],
-    liveUrl: "https://dsp5-archi-o23b-4-5-g5.online/",
+      "Complete institutional website for a school, designed with modern and responsive interface. Content management, news, and integrated contact system.",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    technologies: ["React", "TypeScript", "TailwindCSS", "API REST", "CMS"],
+    liveUrl: "https://2v177.com/home/",
     githubUrl: "https://github.com/jordannbell",
   },
   {
     id: 3,
-    title: "2V177 Platform",
+    title: "The Tip Top - Jeu Concours",
     description:
-      "Plateforme web moderne avec interface utilisateur intuitive et performante",
+      "Plateforme de jeu concours pour une entreprise de vente de thé. Interface interactive avec système de participation, gestion des lots et suivi des participants en temps réel.",
     descriptionEn:
-      "Modern web platform with intuitive and high-performance user interface",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    technologies: ["React", "TypeScript", "TailwindCSS", "API REST"],
-    liveUrl: "https://2v177.com/home/",
+      "Contest game platform for a tea sales company. Interactive interface with participation system, prize management and real-time participant tracking.",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+    technologies: ["React", "Next.js", "TypeScript", "TailwindCSS", "API REST", "Real-time"],
+    liveUrl: "https://dsp5-archi-o23b-4-5-g5.online/",
     githubUrl: "https://github.com/jordannbell",
   },
 ];

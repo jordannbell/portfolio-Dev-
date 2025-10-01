@@ -36,15 +36,15 @@ export const translations = {
       technologies: "Technologies",
       project1: {
         title: "Campus Pass",
-        description: "Plateforme de gestion pour campus avec authentification et dashboard interactif",
+        description: "Plateforme SaaS innovante pour les jeunes Africains, facilitant l'accès aux admissions universitaires",
       },
       project2: {
-        title: "Architecture DSP5",
-        description: "Application web d'architecture avancée avec système de gestion complexe",
+        title: "2V177 - Site École",
+        description: "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive",
       },
       project3: {
-        title: "2V177 Platform",
-        description: "Plateforme web moderne avec interface utilisateur intuitive et performante",
+        title: "The Tip Top - Jeu Concours",
+        description: "Plateforme de jeu concours pour une entreprise de vente de thé avec interface interactive",
       },
     },
     education: {
@@ -106,15 +106,15 @@ export const translations = {
       technologies: "Technologies",
       project1: {
         title: "Campus Pass",
-        description: "Campus management platform with authentication and interactive dashboard",
+        description: "Innovative SaaS platform for young Africans, facilitating access to university admissions",
       },
       project2: {
-        title: "Architecture DSP5",
-        description: "Advanced architecture web application with complex management system",
+        title: "2V177 - School Website",
+        description: "Complete institutional website for a school, designed with modern and responsive interface",
       },
       project3: {
-        title: "2V177 Platform",
-        description: "Modern web platform with intuitive and high-performance user interface",
+        title: "The Tip Top - Contest Game",
+        description: "Contest game platform for a tea sales company with interactive interface",
       },
     },
     education: {
