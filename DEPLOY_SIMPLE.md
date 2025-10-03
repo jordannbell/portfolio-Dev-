@@ -76,3 +76,4 @@ git push
 **Votre portfolio sera en ligne en 15 minutes !**
 
 **Guide détaillé** : `GUIDE_VERCEL.md`
+

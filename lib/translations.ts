@@ -39,10 +39,14 @@ export const translations = {
         description: "Plateforme SaaS innovante pour les jeunes Africains, facilitant l'accès aux admissions universitaires",
       },
       project2: {
+        title: "LT ENR - Solutions Solaires",
+        description: "Site web professionnel pour expert en solutions solaires photovoltaïques avec maintenance continue",
+      },
+      project3: {
         title: "2V177 - Site École",
         description: "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive",
       },
-      project3: {
+      project4: {
         title: "The Tip Top - Jeu Concours",
         description: "Plateforme de jeu concours pour une entreprise de vente de thé avec interface interactive",
       },
@@ -109,10 +113,14 @@ export const translations = {
         description: "Innovative SaaS platform for young Africans, facilitating access to university admissions",
       },
       project2: {
+        title: "LT ENR - Solar Solutions",
+        description: "Professional website for photovoltaic solar solutions expert with continuous maintenance",
+      },
+      project3: {
         title: "2V177 - School Website",
         description: "Complete institutional website for a school, designed with modern and responsive interface",
       },
-      project3: {
+      project4: {
         title: "The Tip Top - Contest Game",
         description: "Contest game platform for a tea sales company with interactive interface",
       },

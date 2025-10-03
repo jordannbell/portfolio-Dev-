@@ -23,7 +23,7 @@ export function Hero() {
       {/* Background Animated Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-accent-primary/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -35,7 +35,7 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent-secondary/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -57,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="text-lg md:text-xl text-light-text-secondary dark:text-dark-text-secondary">
+            <span className="text-lg md:text-xl text-gray-600 dark:text-gray-400">
               {t.hero.greeting}
             </span>
           </motion.div>
@@ -69,7 +69,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4"
           >
-            <span className="gradient-text">{PERSONAL_INFO.name}</span>
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              {PERSONAL_INFO.name}
+            </span>
           </motion.h1>
 
           {/* Title */}
@@ -77,7 +79,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-light-text-primary dark:text-dark-text-primary mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6"
           >
             {t.hero.title}
           </motion.h2>
@@ -87,7 +89,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mb-12"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-12"
           >
             {t.hero.subtitle}
           </motion.p>
@@ -103,7 +105,7 @@ export function Hero() {
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border flex items-center justify-center hover:border-accent-primary dark:hover:border-accent-primary transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
               aria-label="GitHub"
@@ -114,7 +116,7 @@ export function Hero() {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border flex items-center justify-center hover:border-accent-primary dark:hover:border-accent-primary transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
               aria-label="LinkedIn"
@@ -123,7 +125,7 @@ export function Hero() {
             </motion.a>
             <motion.a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="w-12 h-12 rounded-full bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border flex items-center justify-center hover:border-accent-primary dark:hover:border-accent-primary transition-all duration-300"
+              className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Email"
@@ -141,7 +143,7 @@ export function Hero() {
           >
             <motion.button
               onClick={() => scrollToSection("#projects")}
-              className="btn-primary"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -149,7 +151,7 @@ export function Hero() {
             </motion.button>
             <motion.button
               onClick={() => scrollToSection("#contact")}
-              className="btn-outline"
+              className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -174,7 +176,7 @@ export function Hero() {
               className="cursor-pointer"
               onClick={() => scrollToSection("#about")}
             >
-              <FiArrowDown className="w-6 h-6 text-accent-primary" />
+              <FiArrowDown className="w-6 h-6 text-blue-500" />
             </motion.div>
           </motion.div>
         </div>
@@ -182,4 +184,3 @@ export function Hero() {
     </section>
   );
 }
-

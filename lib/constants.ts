@@ -63,6 +63,18 @@ export const PROJECTS = [
   },
   {
     id: 2,
+    title: "LT ENR - Solutions Solaires",
+    description:
+      "Site web professionnel pour LT ENR, expert en solutions solaires photovoltaïques. Développement et maintenance des composants, gestion de base de données MongoDB et interface moderne.",
+    descriptionEn:
+      "Professional website for LT ENR, expert in photovoltaic solar solutions. Component development and maintenance, MongoDB database management and modern interface.",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=600&fit=crop",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "TailwindCSS", "API REST", "Maintenance"],
+    liveUrl: "https://ltenr81.vercel.app/",
+    githubUrl: "https://github.com/jordannbell",
+  },
+  {
+    id: 3,
     title: "2V177 - Site École",
     description:
       "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive. Gestion du contenu, actualités, et système de contact intégré.",
@@ -74,7 +86,7 @@ export const PROJECTS = [
     githubUrl: "https://github.com/jordannbell",
   },
   {
-    id: 3,
+    id: 4,
     title: "The Tip Top - Jeu Concours",
     description:
       "Plateforme de jeu concours pour une entreprise de vente de thé. Interface interactive avec système de participation, gestion des lots et suivi des participants en temps réel.",

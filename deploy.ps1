@@ -46,3 +46,4 @@ Write-Host ""
 Write-Host "📖 Guide complet : GUIDE_VERCEL.md" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "🎉 Votre portfolio sera bientôt en ligne !" -ForegroundColor Green
+
