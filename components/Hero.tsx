@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PERSONAL_INFO } from "@/lib/constants";
+import GradientBlinds from "./GradientBlinds";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -20,35 +21,25 @@ export function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Background Animated Elements */}
+      {/* GradientBlinds Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <GradientBlinds
+          gradientColors={['#3B82F6', '#8B5CF6']}
+          angle={0}
+          noise={0.2}
+          blindCount={12}
+          blindMinWidth={50}
+          spotlightRadius={0.5}
+          spotlightSoftness={1}
+          spotlightOpacity={0.8}
+          mouseDampening={0.15}
+          distortAmount={0}
+          shineDirection="left"
+          mixBlendMode="lighten"
         />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-20">
         <div className="flex flex-col items-center text-center">
           {/* Greeting */}
           <motion.div

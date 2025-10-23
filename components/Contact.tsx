@@ -219,6 +219,8 @@ export function Contact() {
                   required
                   className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors"
                   placeholder="Votre nom"
+                  autoComplete="name"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -238,6 +240,8 @@ export function Contact() {
                   required
                   className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors"
                   placeholder="votre@email.com"
+                  autoComplete="email"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -257,6 +261,7 @@ export function Contact() {
                   rows={6}
                   className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors resize-none"
                   placeholder="Votre message..."
+                  suppressHydrationWarning
                 />
               </div>
 
