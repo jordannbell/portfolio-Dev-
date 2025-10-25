@@ -13,11 +13,42 @@ import {
   FiLayout,
   FiZap,
 } from "react-icons/fi";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMongodb, 
+  SiPostgresql,
+  SiGit,
+  SiDocker,
+  SiFigma,
+  SiWordpress
+} from "react-icons/si";
+import LogoLoop from "./LogoLoop";
 
 export function Skills() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Configuration des logos des technologies
+  const techLogos = [
+    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+    { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+    { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+    { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+    { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+    { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+    { node: <SiDocker />, title: "Docker", href: "https://www.docker.com" },
+    { node: <SiFigma />, title: "Figma", href: "https://www.figma.com" },
+    { node: <SiWordpress />, title: "WordPress", href: "https://wordpress.org" },
+  ];
 
   const skillCategories = [
     {
@@ -164,6 +195,29 @@ export function Skills() {
             </span>{" "}
             maîtrisées pour créer des solutions web complètes
           </p>
+        </motion.div>
+
+        {/* Technology Logos Loop */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="mt-16"
+        >
+          <div className="relative overflow-hidden rounded-lg bg-light-card dark:bg-dark-card p-8 border border-light-border dark:border-dark-border">
+            <LogoLoop
+              logos={techLogos}
+              speed={80}
+              direction="left"
+              logoHeight={48}
+              gap={40}
+              pauseOnHover
+              scaleOnHover
+              fadeOut
+              fadeOutColor="var(--light-card, #ffffff)"
+              ariaLabel="Technologies et outils utilisés"
+            />
+          </div>
         </motion.div>
       </div>
     </section>

@@ -6,6 +6,8 @@ import { PERSONAL_INFO } from "@/lib/constants";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiSend } from "react-icons/fi";
+import ElectricBorder from "./ElectricBorder";
+import StarBorder from "./StarBorder";
 
 export function Contact() {
   const { t } = useLanguage();
@@ -202,7 +204,14 @@ export function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="card space-y-6">
+            <ElectricBorder
+              color="#3b82f6"
+              speed={1.5}
+              chaos={0.8}
+              thickness={2}
+              style={{ borderRadius: 16 }}
+            >
+              <form onSubmit={handleSubmit} className="card space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -210,18 +219,26 @@ export function Contact() {
                 >
                   {t.contact.name}
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors"
-                  placeholder="Votre nom"
-                  autoComplete="name"
-                  suppressHydrationWarning
-                />
+                <StarBorder
+                  as="div"
+                  color="#3b82f6"
+                  speed="4s"
+                  thickness={2}
+                  className="w-full"
+                >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border-none focus:outline-none transition-colors text-light-text-primary dark:text-dark-text-primary"
+                    placeholder="Votre nom"
+                    autoComplete="name"
+                    suppressHydrationWarning
+                  />
+                </StarBorder>
               </div>
 
               <div>
@@ -231,18 +248,26 @@ export function Contact() {
                 >
                   {t.contact.email}
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors"
-                  placeholder="votre@email.com"
-                  autoComplete="email"
-                  suppressHydrationWarning
-                />
+                <StarBorder
+                  as="div"
+                  color="#8b5cf6"
+                  speed="5s"
+                  thickness={2}
+                  className="w-full"
+                >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border-none focus:outline-none transition-colors text-light-text-primary dark:text-dark-text-primary"
+                    placeholder="votre@email.com"
+                    autoComplete="email"
+                    suppressHydrationWarning
+                  />
+                </StarBorder>
               </div>
 
               <div>
@@ -252,55 +277,72 @@ export function Contact() {
                 >
                   {t.contact.message}
                 </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border focus:border-accent-primary dark:focus:border-accent-primary focus:outline-none transition-colors resize-none"
-                  placeholder="Votre message..."
-                  suppressHydrationWarning
-                />
+                <StarBorder
+                  as="div"
+                  color="#06b6d4"
+                  speed="6s"
+                  thickness={2}
+                  className="w-full"
+                >
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 rounded-lg bg-light-card dark:bg-dark-card border-none focus:outline-none transition-colors resize-none text-light-text-primary dark:text-dark-text-primary"
+                    placeholder="Votre message..."
+                    suppressHydrationWarning
+                  />
+                </StarBorder>
               </div>
 
-              <motion.button
-                type="submit"
-                disabled={status === "sending"}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                whileHover={status === "idle" ? { scale: 1.02 } : {}}
-                whileTap={status === "idle" ? { scale: 0.98 } : {}}
+              <StarBorder
+                as="div"
+                color="#10b981"
+                speed="3s"
+                thickness={2}
+                className="w-full"
               >
-                {status === "sending" ? (
-                  <>
-                    <motion.div
-                      className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
-                      animate={{ rotate: 360 }}
-                      transition={{
-                        duration: 1,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-                    {t.contact.sending}
-                  </>
-                ) : status === "success" ? (
-                  <>{t.contact.success}</>
-                ) : (
-                  <>
-                    <FiSend className="w-5 h-5" />
-                    {t.contact.send}
-                  </>
-                )}
-              </motion.button>
+                <motion.button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="w-full bg-accent-primary hover:bg-accent-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 border-none"
+                  whileHover={status === "idle" ? { scale: 1.02 } : {}}
+                  whileTap={status === "idle" ? { scale: 0.98 } : {}}
+                >
+                  {status === "sending" ? (
+                    <>
+                      <motion.div
+                        className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                      />
+                      {t.contact.sending}
+                    </>
+                  ) : status === "success" ? (
+                    <>{t.contact.success}</>
+                  ) : (
+                    <>
+                      <FiSend className="w-5 h-5" />
+                      {t.contact.send}
+                    </>
+                  )}
+                </motion.button>
+              </StarBorder>
 
               {status === "error" && (
                 <p className="text-red-500 text-sm text-center">
                   {t.contact.error}
                 </p>
               )}
-            </form>
+              </form>
+            </ElectricBorder>
           </motion.div>
         </div>
       </div>

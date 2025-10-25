@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PERSONAL_INFO } from "@/lib/constants";
-import GradientBlinds from "./GradientBlinds";
+import LiquidEther from "./LiquidEther";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -21,21 +21,24 @@ export function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* GradientBlinds Background Animation */}
+      {/* LiquidEther Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <GradientBlinds
-          gradientColors={['#3B82F6', '#8B5CF6']}
-          angle={0}
-          noise={0.2}
-          blindCount={12}
-          blindMinWidth={50}
-          spotlightRadius={0.5}
-          spotlightSoftness={1}
-          spotlightOpacity={0.8}
-          mouseDampening={0.15}
-          distortAmount={0}
-          shineDirection="left"
-          mixBlendMode="lighten"
+        <LiquidEther
+          colors={['#3B82F6', '#8B5CF6', '#06B6D4']}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
         />
       </div>
 

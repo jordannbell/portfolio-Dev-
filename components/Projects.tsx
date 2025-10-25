@@ -7,6 +7,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { FiExternalLink, FiGithub, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import useEmblaCarousel from "embla-carousel-react";
+import StarBorder from "./StarBorder";
 
 export function Projects() {
   const { t, language } = useLanguage();
@@ -211,28 +212,44 @@ export function Projects() {
 
                       {/* Links */}
                       <div className="flex gap-4 pt-4">
-                        <motion.a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 btn-primary text-center text-sm"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
+                        <StarBorder
+                          as="div"
+                          color="#3b82f6"
+                          speed="4s"
+                          thickness={1}
+                          className="flex-1"
                         >
-                          <FiExternalLink className="inline w-4 h-4 mr-2" />
-                          {t.projects.viewProject}
-                        </motion.a>
-                        <motion.a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 btn-outline text-center text-sm"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
+                          <motion.a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-accent-primary hover:bg-accent-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-center text-sm flex items-center justify-center gap-2 border-none"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <FiExternalLink className="inline w-4 h-4 mr-2" />
+                            {t.projects.viewProject}
+                          </motion.a>
+                        </StarBorder>
+                        <StarBorder
+                          as="div"
+                          color="#8b5cf6"
+                          speed="5s"
+                          thickness={1}
+                          className="flex-1"
                         >
-                          <FiGithub className="inline w-4 h-4 mr-2" />
-                          {t.projects.viewCode}
-                        </motion.a>
+                          <motion.a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 text-center text-sm flex items-center justify-center gap-2"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                          >
+                            <FiGithub className="inline w-4 h-4 mr-2" />
+                            {t.projects.viewCode}
+                          </motion.a>
+                        </StarBorder>
                       </div>
                     </div>
                   </div>
@@ -243,15 +260,22 @@ export function Projects() {
 
           {/* Navigation Buttons */}
           <div className="flex justify-center items-center gap-4 mt-8">
-            <motion.button
-              onClick={scrollPrev}
-              className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border flex items-center justify-center hover:border-accent-primary dark:hover:border-accent-primary transition-all"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label="Previous project"
+            <StarBorder
+              as="div"
+              color="#06b6d4"
+              speed="3s"
+              thickness={1}
             >
-              <FiChevronLeft className="w-6 h-6" />
-            </motion.button>
+              <motion.button
+                onClick={scrollPrev}
+                className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border-none flex items-center justify-center transition-all"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Previous project"
+              >
+                <FiChevronLeft className="w-6 h-6" />
+              </motion.button>
+            </StarBorder>
 
             {/* Dots Indicator */}
             <div className="flex gap-2">
@@ -269,15 +293,22 @@ export function Projects() {
               ))}
             </div>
 
-            <motion.button
-              onClick={scrollNext}
-              className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border flex items-center justify-center hover:border-accent-primary dark:hover:border-accent-primary transition-all"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label="Next project"
+            <StarBorder
+              as="div"
+              color="#06b6d4"
+              speed="3s"
+              thickness={1}
             >
-              <FiChevronRight className="w-6 h-6" />
-            </motion.button>
+              <motion.button
+                onClick={scrollNext}
+                className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border-none flex items-center justify-center transition-all"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Next project"
+              >
+                <FiChevronRight className="w-6 h-6" />
+              </motion.button>
+            </StarBorder>
           </div>
         </div>
       </div>
