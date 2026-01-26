@@ -28,10 +28,11 @@ export const SKILLS = {
     "Java",
     "Spring Boot",
   ],
-  database: ["PostgreSQL", "MongoDB"],
+  database: ["PostgreSQL", "MongoDB", "Supabase"],
   tools: [
     "Git",
     "GitHub",
+    "GitHub Actions",
     "GitLab",
     "Docker",
     "CI/CD",
@@ -51,18 +52,6 @@ export const SKILLS = {
 export const PROJECTS = [
   {
     id: 1,
-    title: "Campus Pass",
-    description:
-      "Plateforme SaaS innovante pour les jeunes Africains, facilitant l'accès aux admissions universitaires. Solution complète de gestion des candidatures et des bourses d'études.",
-    descriptionEn:
-      "Innovative SaaS platform for young Africans, facilitating access to university admissions. Complete solution for managing applications and scholarships.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
-    liveUrl: "https://campuspass.vercel.app/",
-    githubUrl: "https://github.com/jordannbell",
-  },
-  {
-    id: 2,
     title: "LT ENR - Solutions Solaires",
     description:
       "Site web professionnel pour LT ENR, expert en solutions solaires photovoltaïques. Développement et maintenance des composants, gestion de base de données MongoDB et interface moderne.",
@@ -74,7 +63,7 @@ export const PROJECTS = [
     githubUrl: "https://github.com/jordannbell",
   },
   {
-    id: 3,
+    id: 2,
     title: "2V177 - Site École",
     description:
       "Site web institutionnel complet pour une école, conçu avec une interface moderne et responsive. Gestion du contenu, actualités, et système de contact intégré.",
@@ -85,23 +74,20 @@ export const PROJECTS = [
     liveUrl: "https://2v177.com/home/",
     githubUrl: "https://github.com/jordannbell",
   },
-  {
-    id: 4,
-    title: "The Tip Top - Jeu Concours",
-    description:
-      "Plateforme de jeu concours pour une entreprise de vente de thé. Interface interactive avec système de participation, gestion des lots et suivi des participants en temps réel.",
-    descriptionEn:
-      "Contest game platform for a tea sales company. Interactive interface with participation system, prize management and real-time participant tracking.",
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800&h=600&fit=crop",
-    technologies: ["React", "Next.js", "TypeScript", "TailwindCSS", "API REST", "Real-time"],
-    liveUrl: "https://dsp5-archi-o23b-4-5-g5.online/",
-    githubUrl: "https://github.com/jordannbell",
-  },
 ];
 
 export const EDUCATION = [
   {
     id: 1,
+    degree: "Mastère 2 Data Engineering",
+    school: "Digital School of Paris",
+    period: "2025",
+    description:
+      "Formation spécialisée en ingénierie des données, avec focus sur le traitement, le stockage et l'analyse de grandes quantités de données. Conception et développement de pipelines de données, architectures Big Data et solutions d'analyse avancées.",
+    skills: ["Data Engineering", "Big Data", "Data Pipelines", "Analytics"],
+  },
+  {
+    id: 2,
     degree: "Mastère 2 Architecture Web",
     school: "Digital School of Paris",
     period: "2024",
@@ -110,7 +96,7 @@ export const EDUCATION = [
     skills: ["Architecture Web", "Cloud", "Microservices", "DevOps", "CI/CD"],
   },
   {
-    id: 2,
+    id: 3,
     degree: "Licence en Génie Logiciel",
     school: "IUT de Douala",
     period: "2022",

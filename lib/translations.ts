@@ -69,8 +69,6 @@ export const translations = {
     },
     footer: {
       rights: "Tous droits réservés.",
-      madeWith: "Fait avec",
-      using: "avec Next.js, TypeScript & Tailwind CSS",
     },
   },
   en: {
@@ -143,8 +141,6 @@ export const translations = {
     },
     footer: {
       rights: "All rights reserved.",
-      madeWith: "Made with",
-      using: "with Next.js, TypeScript & Tailwind CSS",
     },
   },
 };

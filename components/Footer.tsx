@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiHeart, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PERSONAL_INFO } from "@/lib/constants";
 
@@ -81,32 +81,6 @@ export function Footer() {
             </p>
           </motion.div>
         </div>
-
-        {/* Bottom - Made With */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-8 pt-8 border-t border-light-border dark:border-dark-border text-center"
-        >
-          <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary flex items-center justify-center gap-2 flex-wrap">
-            <span>{t.footer.madeWith}</span>
-            <motion.span
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <FiHeart className="inline text-red-500" />
-            </motion.span>
-            <span>{t.footer.using}</span>
-          </p>
-        </motion.div>
       </div>
     </footer>
   );
