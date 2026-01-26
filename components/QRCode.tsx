@@ -9,7 +9,7 @@ interface QRCodeProps {
   size?: number;
 }
 
-export function QRCode({ url = "https://portfolio-jordanb.vercel.app", size = 200 }: QRCodeProps) {
+export function QRCode({ url = "https://jordan-bell.vercel.app/", size = 200 }: QRCodeProps) {
   const [showModal, setShowModal] = useState(false);
   const [qrSvg, setQrSvg] = useState<string>("");
 

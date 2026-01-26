@@ -2,6 +2,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jordanbell-portfolio.vercel.app/sitemap.xml
+Sitemap: https://jordan-bell.vercel.app/sitemap.xml
 
 
