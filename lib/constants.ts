@@ -8,25 +8,24 @@ export const PERSONAL_INFO = {
 };
 
 export const SKILLS = {
-  frontend: [
-    "React",
-    "Next.js",
-    "Angular",
-    "Vue.js",
+  languages: [
     "JavaScript ES6+",
-    "TypeScript",
     "HTML5",
     "CSS3",
-    "TailwindCSS",
-    "Bootstrap",
+    "TypeScript",
+    "Python",
   ],
-  backend: [
+  mobile: ["React Native", "Flutter"],
+  frameworks: [
+    "Next.js",
+    "React",
+    "Angular 18",
+    "Vue.js",
     "Node.js",
     "Express",
-    "PHP",
-    "Symfony",
-    "Java",
-    "Spring Boot",
+    "TailwindCSS",
+    "Bootstrap",
+    "Django",
   ],
   database: ["PostgreSQL", "MongoDB", "Supabase"],
   tools: [
@@ -72,6 +71,30 @@ export const PROJECTS = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
     technologies: ["React", "TypeScript", "TailwindCSS", "API REST", "CMS"],
     liveUrl: "https://2v177.com/home/",
+    githubUrl: "https://github.com/jordannbell",
+  },
+  {
+    id: 3,
+    title: "H2 Tracker",
+    description:
+      "Application web de suivi et de visualisation des données, interface moderne et responsive pour le pilotage des indicateurs en temps réel.",
+    descriptionEn:
+      "Web application for tracking and visualizing data, with a modern responsive interface for real-time indicator monitoring.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "API REST", "Data viz"],
+    liveUrl: "https://h2-tracker.com/",
+    githubUrl: "https://github.com/jordannbell",
+  },
+  {
+    id: 4,
+    title: "Long Exchange",
+    description:
+      "Plateforme web pour Long Exchange (environnement de test), mise en place de l'interface et des flux métiers associés.",
+    descriptionEn:
+      "Web platform for Long Exchange (test environment), implementing the interface and related business flows.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    technologies: ["React", "Next.js", "TypeScript", "TailwindCSS", "API REST"],
+    liveUrl: "https://test.long-exchange.com/",
     githubUrl: "https://github.com/jordannbell",
   },
 ];

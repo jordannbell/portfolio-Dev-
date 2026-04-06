@@ -1,10 +1,20 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { PERSONAL_INFO } from "@/lib/constants";
-import LiquidEther from "./LiquidEther";
+
+const LiquidEther = dynamic(() => import("./LiquidEther"), {
+  ssr: false,
+  loading: () => (
+    <div
+      className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-purple-500/15 to-cyan-500/15 dark:from-blue-950/40 dark:via-purple-950/30 dark:to-cyan-950/30"
+      aria-hidden
+    />
+  ),
+});
 
 export function Hero() {
   const { t } = useLanguage();
@@ -24,14 +34,14 @@ export function Hero() {
       {/* LiquidEther Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <LiquidEther
-          colors={['#3B82F6', '#8B5CF6', '#06B6D4']}
+          colors={["#3B82F6", "#8B5CF6", "#06B6D4"]}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
           viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
+          iterationsViscous={28}
+          iterationsPoisson={28}
+          resolution={0.42}
           isBounce={false}
           autoDemo={true}
           autoSpeed={0.5}
@@ -56,14 +66,14 @@ export function Hero() {
             </span>
           </motion.div>
 
-          {/* Name */}
+          {/* Name — Rubik Maze (même police que le footer) */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4"
+            className="text-5xl md:text-7xl lg:text-8xl font-normal mb-4 leading-none tracking-tight"
           >
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="font-rubik-maze text-gray-900 dark:text-white">
               {PERSONAL_INFO.name}
             </span>
           </motion.h1>
@@ -136,6 +146,7 @@ export function Hero() {
             className="flex flex-wrap gap-4 justify-center"
           >
             <motion.button
+              type="button"
               onClick={() => scrollToSection("#projects")}
               className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
@@ -144,6 +155,7 @@ export function Hero() {
               {t.hero.cta}
             </motion.button>
             <motion.button
+              type="button"
               onClick={() => scrollToSection("#contact")}
               className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-300"
               whileHover={{ scale: 1.05 }}

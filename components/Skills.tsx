@@ -7,7 +7,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   FiCode,
-  FiServer,
+  FiSmartphone,
+  FiLayers,
   FiDatabase,
   FiTool,
   FiLayout,
@@ -52,15 +53,21 @@ export function Skills() {
 
   const skillCategories = [
     {
-      title: t.skills.frontend,
-      skills: SKILLS.frontend,
+      title: t.skills.languages,
+      skills: SKILLS.languages,
       icon: FiCode,
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: t.skills.backend,
-      skills: SKILLS.backend,
-      icon: FiServer,
+      title: t.skills.mobile,
+      skills: SKILLS.mobile,
+      icon: FiSmartphone,
+      color: "from-violet-500 to-purple-500",
+    },
+    {
+      title: t.skills.frameworks,
+      skills: SKILLS.frameworks,
+      icon: FiLayers,
       color: "from-green-500 to-emerald-500",
     },
     {
@@ -191,9 +198,9 @@ export function Skills() {
         >
           <p className="text-light-text-secondary dark:text-dark-text-secondary text-lg">
             <span className="gradient-text font-semibold">
-              20+ technologies
+              {t.skills.taglineBold}
             </span>{" "}
-            maîtrisées pour créer des solutions web complètes
+            {t.skills.taglineRest}
           </p>
         </motion.div>
 

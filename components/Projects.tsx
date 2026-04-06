@@ -267,7 +267,8 @@ export function Projects() {
               thickness={1}
             >
               <motion.button
-                onClick={scrollPrev}
+                type="button"
+                onClick={() => scrollPrev()}
                 className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border-none flex items-center justify-center transition-all"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -281,6 +282,7 @@ export function Projects() {
             <div className="flex gap-2">
               {PROJECTS.map((_, index) => (
                 <button
+                  type="button"
                   key={index}
                   onClick={() => emblaApi?.scrollTo(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -300,7 +302,8 @@ export function Projects() {
               thickness={1}
             >
               <motion.button
-                onClick={scrollNext}
+                type="button"
+                onClick={() => scrollNext()}
                 className="w-12 h-12 rounded-full bg-light-surface dark:bg-dark-surface border-none flex items-center justify-center transition-all"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

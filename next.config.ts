@@ -4,13 +4,20 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["localhost"],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+      { protocol: "https", hostname: "localhost", pathname: "/**" },
+    ],
     formats: ["image/avif", "image/webp"],
   },
   compress: true,
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ['lucide-react', 'react-icons'],
+    optimizePackageImports: [
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+    ],
   },
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
